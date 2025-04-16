@@ -1,50 +1,19 @@
 <template>
 	<div id="app">
-		<tab-bar>
-			<tab-bar-item>
-				<!-- <template #item-icon
-					><img src="./assets/img/tabbar/hompage.png" alt=""/>
-        </template>
-        <template #item-text>
-          <div>首页</div>
-        </template> -->
-        <img slot="item-icon" src="./assets/img/tabbar/hompage.png" alt="" />
-        <img slot="item-icon-active" src="./assets/img/tabbar/hompage_active.png" alt="" />
-        <div slot="item-text">首页</div>
+    <router-view></router-view>
+    <main-tab-bar></main-tab-bar>
 
-        <!-- 不显示 -->
-				<!-- <img src="./assets/img/tabbar/hompage.png" alt=""> -->
-				<!-- <div>首页</div> -->
-			</tab-bar-item>
-			<tab-bar-item>
-				<img slot="item-icon" src="./assets/img/tabbar/categories.png" alt="" />
-				<img slot="item-icon-active" src="./assets/img/tabbar/categories_active.png" alt="" />
-				<div slot="item-text" >分类</div>
-			</tab-bar-item>
-			<tab-bar-item>
-				<img slot="item-icon" src="./assets/img/tabbar/shopcat.png" alt="" />
-				<img slot="item-icon-active" src="./assets/img/tabbar/shopcat_active.png" alt="" />
-				<div slot="item-text">购物</div>
-			</tab-bar-item>
-			<tab-bar-item>
-				<img slot="item-icon" src="./assets/img/tabbar/profile.png" alt="" />
-				<img slot="item-icon-active" src="./assets/img/tabbar/profile_active.png" alt="" />
-				<div slot="item-text">我的</div>
-			</tab-bar-item>
-
-		</tab-bar>
 	</div>
+  
 </template>
 
 <script>
-const TabBar = () => import("./components/tabbar/TabBar.vue");
-const TabBarItem = () => import("./components/tabbar/TabBarItem.vue");
+import MainTabBar from "@/components/MainTabBar.vue"
 
 export default {
 	name: "App",
 	components: {
-		TabBar,
-		TabBarItem,
+		MainTabBar,
 	},
 };
 </script>
